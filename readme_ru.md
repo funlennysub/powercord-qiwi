@@ -22,4 +22,4 @@ powercord-qiwi
 ##### ID QIWI кошелька: _Ваш номер телефона_
 
  - - - - - - -
- [README on English]()
+ [README on English](https://github.com/funlennysub/powercord-qiwi/blob/master/README.md)
