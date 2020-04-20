@@ -19,7 +19,7 @@ powercord-qiwi
 -
 
 ##### QIWI OAuth-токен: _Токен который вы получили ранее_
-##### ID QIWI кошелька: _Ваш номер телефона_
+##### ID QIWI кошелька: _Ваш номер телефона без "+"_
 
  - - - - - - -
  [README on English](https://github.com/funlennysub/powercord-qiwi/blob/master/README.md)
