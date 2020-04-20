@@ -11,7 +11,7 @@ module.exports = class Qiwi extends Plugin {
         powercord.api.i18n.loadAllStrings(require('./i18n/index'));
         this.registerSettings('powercord-qiwi', () => Messages.QIWI_PLUGIN_NAME, Settings);
         this.loadCSS(resolve(__dirname, 'style.css'));
-       this.registerCommand('qiwi', [], 'Checks your Qiwi Account balance and latest IN and OUT operation.', '{c}', this.qiwi.bind(this));
+        this.registerCommand('qiwi', [], 'Checks your Qiwi Account balance and latest IN and OUT operation.', '{c}', this.qiwi.bind(this));
     }
 
     async qiwi () {
@@ -23,25 +23,24 @@ module.exports = class Qiwi extends Plugin {
             978: "EUR (€)",
             398: "KZT (₸)"
         };
-        const req = http.get(`https://edge.qiwi.com/funding-sources/v2/persons/${wallet}/accounts`);
-        req.opts.headers = {
-            'Accept': 'application/json',
-            'Authorization': 'Bearer ' + token
-        }; // Thx zziger#8040 for this part ^
-        const oIN = http.get(`https://edge.qiwi.com/payment-history/v2/persons/${wallet}/payments?operation=IN&rows=1`);
-        const oOUT = http.get(`https://edge.qiwi.com/payment-history/v2/persons/${wallet}/payments?operation=OUT&rows=1`);
-        oIN.opts.headers = {
-            'Accept': 'application/json',
-            'Authorization': 'Bearer ' + token
-        };
-        oOUT.opts.headers = {
-            'Accept': 'application/json',
-            'Authorization': 'Bearer ' + token
-        };
+
+
         try {
-        const {body} = await req.execute();
-        const {body: body_in} = await oIN.execute();
-        const {body: body_out} = await oOUT.execute();
+            const { body } = await (
+                http.get(`https://edge.qiwi.com/funding-sources/v2/persons/${wallet}/accounts`)
+                    .set('Accept', 'application/json')
+                    .set('Authorization', 'Bearer ' + token)
+            );
+            const { body: body_in } = await (http.get(`https://edge.qiwi.com/payment-history/v2/persons/${wallet}/payments?operation=IN&rows=1`)
+                    .set('Accept', 'application/json')
+                    .set('Authorization', 'Bearer ' + token)
+            );
+            const { body: body_out } = await (
+                http.get(`https://edge.qiwi.com/payment-history/v2/persons/${wallet}/payments?operation=OUT&rows=1`)
+                    .set('Accept', 'application/json')
+                    .set('Authorization', 'Bearer ' + token)
+            );
+
             return {
                 send: false,
                 result: {
@@ -63,7 +62,7 @@ module.exports = class Qiwi extends Plugin {
                     ],
                 }
             };
-    } catch (e) {
+        } catch (e) {
             console.log(e);
             return {
                 send: false,
