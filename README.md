@@ -19,7 +19,7 @@ Plugin settings
 -
 
 ##### QIWI OAuth token: _Token that you received earlier_
-##### QIWI Wallet ID: _Your phone number_
+##### QIWI Wallet ID: _Your phone number with out "+"_
 
  - - - - - - -
  [README on Russian](https://github.com/funlennysub/powercord-qiwi/blob/master/readme_ru.md)
