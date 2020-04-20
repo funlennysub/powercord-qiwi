@@ -6,7 +6,6 @@
   "license": "MIT",
   "description": "Allows you to check your Qiwi Account balance",
   "dependencies": {
-    "moment": "^2.24.0",
-    "node-qiwi-api": "^2.1.0"
+    "moment": "^2.24.0"
   }
 }
