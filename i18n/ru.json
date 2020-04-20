@@ -1,0 +1,13 @@
+{
+  "QIWI_PLUGIN_NAME": "Баланс QIWI",
+  "QIWI_PLUGIN_DESCRIPTION": "Плагин для Powercord, который позволяет манипулировать вашим аккаунтом QIWI Кошелька.",
+  "QIWI_PLUGIN_MESSAGE_EMBED_DESC": "Баланс",
+  "QIWI_PLUGIN_MESSAGE_EMBED_OPERATIONS": "Операции",
+  "QIWI_PLUGIN_MESSAGE_EMBED_IN": "получено",
+  "QIWI_PLUGIN_MESSAGE_EMBED_OUT": "потрачено",
+  "QIWI_PLUGIN_SETTINGS_CATEGORY_NAME": "Настройки",
+  "QIWI_PLUGIN_SETTINGS_OAUTH": "QIWI OAuth-токен",
+  "QIWI_PLUGIN_SETTINGS_OAUTH_DESC": "QIWI OAuth-токен используется для получения информации Qiwi аккаунта.",
+  "QIWI_PLUGIN_SETTINGS_PERSON_ID": "ID QIWI кошелька",
+  "QIWI_PLUGIN_SETTINGS_PERSON_ID_DESC": "Другими словами, номер телефона, который использовался при создании кошелька QIWI."
+}

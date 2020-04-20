@@ -1,0 +1,13 @@
+{
+  "QIWI_PLUGIN_NAME": "QIWI Balance",
+  "QIWI_PLUGIN_DESCRIPTION": "Powercord plugin that allows you to manipulate with your QIWI Wallet account.",
+  "QIWI_PLUGIN_MESSAGE_EMBED_DESC": "Balance",
+  "QIWI_PLUGIN_MESSAGE_EMBED_OPERATIONS": "Operations",
+  "QIWI_PLUGIN_MESSAGE_EMBED_IN": "received",
+  "QIWI_PLUGIN_MESSAGE_EMBED_OUT": "spent",
+  "QIWI_PLUGIN_SETTINGS_CATEGORY_NAME": "Settings",
+  "QIWI_PLUGIN_SETTINGS_OAUTH": "QIWI OAuth token",
+  "QIWI_PLUGIN_SETTINGS_OAUTH_DESC": "Qiwi OAuth token is used to obtain QIWI account information.",
+  "QIWI_PLUGIN_SETTINGS_PERSON_ID": "QIWI Wallet ID",
+  "QIWI_PLUGIN_SETTINGS_PERSON_ID_DESC": "In other words, the phone number that was used to create the Qiwi wallet."
+}

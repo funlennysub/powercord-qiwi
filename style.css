@@ -1,0 +1,3 @@
+.qiwi-settings-fields:not(:hover):not(:active):not(:focus) {
+  filter: blur(9px);
+}
