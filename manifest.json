@@ -2,7 +2,7 @@
   "name": "Qiwi Account Plugin",
   "description": "Powercord plugin that allows you to manipulate with your QIWI Wallet account.",
   "author": "funlennysub#6727",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "permissions": "ext_api"
 }

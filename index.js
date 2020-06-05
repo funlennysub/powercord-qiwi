@@ -9,9 +9,19 @@ module.exports = class Qiwi extends Plugin {
 
     startPlugin () {
         powercord.api.i18n.loadAllStrings(require('./i18n/index'));
-        this.registerSettings('powercord-qiwi', () => Messages.QIWI_PLUGIN_NAME, Settings);
-        this.loadCSS(resolve(__dirname, 'style.css'));
-        this.registerCommand('qiwi', [], 'Checks your Qiwi Account balance and latest IN and OUT operation.', '{c}', this.qiwi.bind(this));
+        powercord.api.settings.registerSettings('powercord-qiwi', {
+            category: this.entityID,
+            label: () => Messages.QIWI_PLUGIN_NAME,
+            render: Settings
+        })
+        this.loadStylesheet('./style.css');
+        powercord.api.commands.registerCommand({
+            command: 'qiwi',
+            aliases: [],
+            description: 'Checks your Qiwi Account balance and latest IN and OUT operation.',
+            usage: '{c}',
+            executor: this.qiwi.bind(this)
+          })
     }
 
     async qiwi () {
@@ -70,4 +80,10 @@ module.exports = class Qiwi extends Plugin {
             }
         }
     }
+
+    pluginWillUnload () {
+        powercord.api.commands.unregisterCommand('qiwi')
+        powercord.api.settings.unregisterSettings('powercord-qiwi')
+      }
+
 };
