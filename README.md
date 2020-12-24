@@ -1,3 +1,4 @@
+# Probably broken idk ¯\_(ツ)_/¯
 powercord-qiwi
 =
 
